@@ -1,11 +1,12 @@
+import ContactSection from "@/components/contact-section";
+import OurOffices from "@/components/offices-section";
 import React from "react";
 
 const Contact = () => {
   return (
     <main>
-      <h1 className="hover:text-primary text-black cursor-pointer">
-        Contact page
-      </h1>
+      <ContactSection />
+      <OurOffices />
     </main>
   );
 };

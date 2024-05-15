@@ -189,36 +189,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 md:mt-0">
-          <h3 className="text-sm font-semibold leading-6 text-white">
-            Offices
-          </h3>
-          <ul role="list" className="lg:flex lg:align-middle mt-6 space-y-4">
-            {navigation.offices.map((item) => (
-              <li className="flex flex-col justify-center " key={item.name}>
-                <p className="text-lg leading-6 text-gray-300 font-semibold">
-                  {item.name}
-                </p>
-                <p className="text-sm leading-6 text-gray-300">
-                  {`${item.address_line_1}, ${item.address_line_2}`}
-                </p>
-                {item.po_box && (
-                  <p className="text-sm leading-6 text-gray-300">
-                    {`P.O Box ${item.po_box}`}
-                  </p>
-                )}
-                <p className="text-sm leading-6 text-gray-300">
-                  {`Tel ${item.phone_num_1}/ ${item.phone_num_2}`}
-                </p>
-                {item.email && (
-                  <p className="text-sm leading-6 text-gray-300">
-                    {`Email ${item.email}`}
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
             African Capital Limited Copyright &copy; 2024

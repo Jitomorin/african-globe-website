@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 // const colors = require('tailwindcss/colors')
 import colors from 'tailwindcss/colors'
+const {nextui} = require("@nextui-org/react");
 
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors: {
@@ -166,12 +168,14 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
   plugins: [
      module.exports = {
     
     plugins: [
       require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
+         require('@tailwindcss/aspect-ratio'),
+      nextui(),
     ],
   }
   ],
