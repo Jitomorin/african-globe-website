@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "Types of Loans", href: "/types-of-loans" },
+  { name: "Salary Check Off Loan", href: "/check-off-loan" },
   { name: `FAQ's`, href: "/faq" },
   { name: "Contact", href: "/contact" },
   { name: "Apply Loan", href: "/apply-loan" },
@@ -87,8 +87,10 @@ export default function Navbar() {
                   as="a"
                   href={link.href}
                   className={`block ${
-                    pathName === link.href ? `border-l-4` : `border-none`
-                  }  hover:border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700 transition-all ease-in-out`}
+                    pathName === link.href
+                      ? `border-l-4 text-primary`
+                      : `border-none text-indigo-700`
+                  }  hover:border-l-4 border-primary bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium transition-all ease-in-out`}
                 >
                   {link.name}
                 </Disclosure.Button>

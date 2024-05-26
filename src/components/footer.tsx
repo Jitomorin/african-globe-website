@@ -111,89 +111,71 @@ export default function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <div className="h-52 flex justify-center items-center align-middle bg-white rounded-full w-52 object-contain  ">
-              <img
-                className="object-contain h-36 w-36"
-                src="/logos/logo_no_bg.png"
-                alt="Company name"
-              />
-            </div>
+        <div className="xl:grid xl:grid-cols-4 xl:gap-8">
+          <div className="space-y-8 col-span-2">
+            <h3 className="text-sm font-semibold leading-6 text-white">
+              About Us
+            </h3>
 
             <p className="text-sm leading-6 text-gray-300">
-              The solution to your money needs
+              African Capital Limited was established in 2004 and currently
+              provides loans to civil servants, teachers and salaried employees
+              of reputable organizations in Kenya. Over the years the company
+              has grown gradually and has a substantial customer base.
             </p>
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-500 hover:text-gray-400"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Company
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.links.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Clients
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.clients.map((item) => (
-                    <li key={item.name}>
-                      <p className="text-sm leading-6 text-gray-300">
-                        {item.name}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="flex col-span-2 flex-row md:flex-col md:space-x-0 space-x-8 lg:mt-10 w-full">
+            <div className=" md:mt-8">
+              <h3 className="text-sm font-semibold leading-6 text-white">
+                Company
+              </h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.links.map((item) => (
+                  <li key={item.name} className="w-auto">
+                    <a
+                      href={item.href}
+                      className="text-sm leading-6 text-gray-300 hover:text-white w-auto"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Branches
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.branches.map((item) => (
-                    <li key={item.name}>
-                      <p className="text-sm leading-6 text-gray-300">
-                        {item.name}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
+            <div className="mt-10  md:mt-8">
+              <h3 className="text-sm font-semibold leading-6 text-white">
+                Branches
+              </h3>
+              <ul role="list" className="mt-6  grid grid-cols-3   w-full gap-8">
+                {navigation.branches.map((item) => (
+                  <li className="flex" key={item.name}>
+                    <p className="text-sm leading-6 text-gray-300">
+                      {item.name}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-16 flex space-x-4 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
             African Capital Limited Copyright &copy; 2024
           </p>
+          <div className="flex space-x-6">
+            {navigation.social.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-gray-400"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

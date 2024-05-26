@@ -170,13 +170,10 @@ module.exports = {
   },
   darkMode: "class",
   plugins: [
-     module.exports = {
-    
-    plugins: [
-      require('@tailwindcss/forms'),
+    nextui(),
+    require('@tailwindcss/forms'),
          require('@tailwindcss/aspect-ratio'),
-      nextui(),
-    ],
-  }
+     
+  
   ],
 }

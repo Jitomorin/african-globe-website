@@ -37,6 +37,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { useRouter } from "next/navigation";
 import Divider from "@/components/divider";
+import TestimonialsSlider from "@/components/testimonials-slider";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -227,19 +228,6 @@ export default function Home() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="mx-auto max-w-md px-6 pb-10 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
               <div className="lg:py-24">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
-                >
-                  <span className="rounded-full bg-gradient-to-r from-primary-400 to-primary px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                    {`Contact us`}
-                  </span>
-                  <span className="ml-4 text-sm">We want to hear from you</span>
-                  <ChevronRightIcon
-                    className="ml-2 h-5 w-5 text-gray-500"
-                    aria-hidden="true"
-                  />
-                </a>
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block">Fast and Easy</span>
                   <span className="block bg-gradient-to-r from-primary-400 to-primary bg-clip-text pb-3 text-transparent sm:pb-5">
@@ -259,7 +247,7 @@ export default function Home() {
                             router.push("/apply-loan");
                           }}
                           type="submit"
-                          className="block w-full rounded-md bg-gradient-to-r from-primary-400 to-primary px-4 py-3 font-medium text-white shadow transition-all ease-in-out hover:to-primary-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                          className="block w-full rounded-md bg-gradient-to-r from-primary-400 to-primary px-4 py-3 font-medium text-white shadow transition-all ease-in-out hover:to-primary-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-xl focus:ring-offset-2 focus:ring-offset-gray-900"
                         >
                           Apply Now
                         </button>
@@ -288,21 +276,22 @@ export default function Home() {
       <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
         <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
           <div>
-            <h2 className="text-lg font-semibold text-primary">Technology</h2>
+            <h2 className="text-lg font-semibold text-primary">About</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Using Technology to Serve Customers
+              {/* Background */}
+              Founding and Clientele of African Capital Limited
             </p>
             <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
-              Keeping in line with our motto of “Fast, Easy Loans”, you can now
-              apply online for an immediate response to your needs. You can also
-              track your application online.
+              African Capital Limited was established in 2004 and currently
+              provides loans to civil servants, teachers and salaried employees
+              of reputable organizations in Kenya.
             </p>
           </div>
           <div className="-mb-10 mt-12 sm:-mb-24 lg:-mb-80">
             {/* Image by <a href="https://pixabay.com/users/firmbee-663163/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=620822">Firmbee</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=620822">Pixabay</a> */}
             <img
               className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-              src="/covers/technology_cover.jpg"
+              src="/covers/background.jpg"
               alt=""
             />
           </div>
@@ -354,92 +343,28 @@ export default function Home() {
       </div>
 
       {/* Testimonial section */}
-      <div className="bg-gradient-to-r from-primary-400 to-primary pb-16 lg:relative lg:z-10 lg:pb-0">
-        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-            <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0 lg:py-20">
-              <blockquote>
-                <div>
-                  <p className="mt-6 text-3xl font-medium text-white">
-                    Our Team
-                  </p>
-                </div>
-                <footer className="mt-6">
-                  <p className="text-base font-medium text-white">
-                    African Capital Senior Management has wide experience in
-                    banking, operations and administration.
-                  </p>
-                  <p className="text-base font-medium text-cyan-100">
-                    They provide direction and guidance to their team members to
-                    ensure that they are constantly developing in their area of
-                    expertise.
-                  </p>
-                </footer>
-              </blockquote>
-            </div>
-          </div>{" "}
-          <div className="relative lg:-my-8">
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-            />
-            <div className="mx-auto max-w-md px-6 sm:max-w-3xl lg:h-full lg:p-0">
-              <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-xl shadow-xl sm:aspect-h-7 sm:aspect-w-16 lg:aspect-none lg:h-full">
-                <img
-                  className="object-cover lg:h-full lg:w-full"
-                  src="/covers/team_cover.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
+      <div className="bg-gradient-to-r from-primary-400 to-primary pb-16 lg:relative lg:z-10 lg:pb-0 p-2 px-14">
+        <blockquote className="mb-4">
+          <div>
+            <p className="mt-6 text-3xl font-medium text-white text-center">
+              Testimonials
+            </p>
           </div>
-        </div>
+          <footer className="mt-6">
+            <p className="text-sm md-text-base font-medium text-center text-cyan-100">
+              Hear from our satisfied clients who have experienced our
+              exceptional service and innovative solutions.
+            </p>
+          </footer>
+        </blockquote>
+        <TestimonialsSlider />
       </div>
 
       {/* Space */}
       <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32"></div>
 
       {/* Background Section */}
-      <div className="relative bg-gray-900">
-        <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-          <img
-            className="h-full w-full object-cover"
-            src="/covers/about_cover.jpg"
-            alt=""
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"
-          />
-        </div>
-        <div className="relative mx-auto max-w-md px-6 py-12 sm:max-w-7xl sm:py-20 md:py-28 lg:px-8 lg:py-32">
-          <div className="md:ml-auto md:w-1/2 md:pl-10">
-            <h2 className="text-lg font-semibold text-gray-300">About</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Background
-            </p>
-            <p className="mt-3 text-lg text-gray-300">
-              African Capital Limited was established in 2004 and currently
-              provides loans to civil servants, teachers and salaried employees
-              of reputable organizations in Kenya.
-            </p>
-            <div className="mt-8">
-              <div className="inline-flex rounded-md shadow">
-                <a
-                  href="/faq"
-                  className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
-                >
-                  Learn more
-                  {/* <ArrowTopRightOnSquareIcon
-                    className="-mr-1 ml-3 h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  /> */}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* <Divider className="my-8" /> */}
     </main>
   );
